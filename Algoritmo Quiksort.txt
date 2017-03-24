@@ -1,3 +1,4 @@
+/*..............Algoritmo de Ordenamiento.........*/
 #include <stdio.h>
 
 void qs(int lista[],int limite_izq,int limite_der)
