@@ -1,0 +1,47 @@
+// estae es el primer cambio para el algoritmo
+
+
+#include<stdio.h>
+#include<conio.h>
+#include <stdlib.h>
+#include <time.h>
+
+const int Max=100000;
+
+int main(){
+
+int array[Max];
+int L=Max;
+int i,j,h,aux,te
+
+
+
+  clock_t comienzo;
+   comienzo=clock();
+
+      for(h=0; h<L;h++){
+        array[h] =rand()%100;
+                    }
+
+
+    	for(i = 0; i < L; i++){
+            j = i;
+            aux = array[i];
+            while ((j > 0) && (aux < array[j - 1])) {
+                array[j] = array[j - 1];
+                j--;
+            }
+            array[j] = aux;
+    }
+
+
+	for(i=0;i<L;i++){
+		printf("%i ",array[i]);
+	}
+printf( "\n \n Segundos transcurridos en la ejecucion del algoritmo por Seleccion: %f s\n",  (clock()-comienzo)/(double)CLOCKS_PER_SEC );
+
+	getch();
+	return 0;
+
+// Final de linea
+}

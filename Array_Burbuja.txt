@@ -1,0 +1,40 @@
+//Metodo Burbuja
+
+#include<stdio.h>
+#include<conio.h>
+#include <stdlib.h>
+#include <time.h>
+
+const int Max=10000;
+
+int main(){
+
+int array[Max];
+int L=Max;
+int i,j,h,aux,nume;
+
+  clock_t comienzo;
+   comienzo=clock();
+
+   for(h=0; h<L;h++){
+        array[h] =rand()%100;
+                    }
+         for(i=0;i<L;i++){
+            for(j=0;j<L;j++){
+                if(array[j] > array[j+1]){
+                    aux = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = aux;
+			}
+		}
+	}
+		for(i=0;i<L;i++){
+		printf("%i ",array[i]);
+	}
+
+printf( "\n \n Segundos transcurridos en la ejecucion del algoritmo de Burbuja: %f s\n", (clock()-comienzo)/(double)CLOCKS_PER_SEC );
+
+	getch();
+	return 0;
+
+}
